@@ -1,21 +1,19 @@
 package bicycles;
 
-import models.MountainBike;
-
+import models.TandemBike;
 import org.junit.jupiter.api.Test;
 import rides.BikeRideOne;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BikeRideTest {
+public class TandemBikeTest {
 
     @Test
-    public void rideTest() {
-        MountainBike bicycle = new MountainBike();
+    public void tandemBikeRideOneTest() {
+        TandemBike bicycle = new TandemBike();
         BikeRideOne bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
         System.out.println(bikeRide.currentSpeed());
-        assertEquals(24, bikeRide.currentSpeed());
+        assertEquals(58, bikeRide.currentSpeed());
     }
-
 }

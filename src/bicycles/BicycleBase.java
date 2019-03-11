@@ -8,6 +8,8 @@ public abstract class BicycleBase implements Bicycle {
         speed += speeder;
     }
 
+
+
     @Override
     public int getSpeed() {
         return speed;
@@ -15,6 +17,6 @@ public abstract class BicycleBase implements Bicycle {
 
     @Override
     public void stop() {
-
+     speed = 0;
     }
 }

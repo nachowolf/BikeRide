@@ -1,6 +1,5 @@
 package models;
-
-public class MountainBike extends bicycles.BicycleBase {
+public class MountainBike extends bicycles.BicycleBase{
 
     private int mountainBikeAccelerateSpeed = 5;
     private int mountainBikeBrakeSpeed = -3;

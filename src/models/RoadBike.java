@@ -1,28 +1,28 @@
 package models;
 
-public class RoadBike implements bicycles.Bicycle{
+public class RoadBike extends bicycles.BicycleBase{
     private int roadBikeAccelerateSpeed = 11;
-    private int roadBikeBrakeSpeed = 4;
-    private int speed = 0;
+    private int roadBikeBrakeSpeed = -4;
 
 
-    @Override
+
+//    @Override
     public void accelerate() {
-        speed += roadBikeAccelerateSpeed;
+        changeSpeed(roadBikeAccelerateSpeed);
     }
 
-    @Override
+//    @Override
     public void brake() {
-        speed -= roadBikeBrakeSpeed;
+        changeSpeed(roadBikeBrakeSpeed);
     }
 
-    @Override
-    public int getSpeed() {
-        return speed;
-    }
+//    @Override
+//    public int getSpeed() {
+//        return speed;
+//    }
 
-    @Override
-    public void stop() {
-        speed = 0;
-    }
+//    @Override
+//    public void stop() {
+//        speed = 0;
+//    }
 }

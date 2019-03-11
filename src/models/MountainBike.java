@@ -2,19 +2,19 @@ package models;
 
 public class MountainBike implements bicycles.Bicycle {
 
-    private int roadBikeAccelerateSpeed = 11;
-    private int roadBikeBrakeSpeed = 4;
+    private int mountainBikeAccelerateSpeed = 5;
+    private int mountainBikeBrakeSpeed = 3;
     private int speed = 0;
 
 
     @Override
     public void accelerate() {
-        speed += roadBikeAccelerateSpeed;
+        speed += mountainBikeAccelerateSpeed;
     }
 
     @Override
     public void brake() {
-     speed -= roadBikeBrakeSpeed;
+     speed -= mountainBikeBrakeSpeed;
     }
 
     @Override

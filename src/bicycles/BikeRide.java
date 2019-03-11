@@ -1,24 +1,10 @@
 package bicycles;
 
-public class BikeRide{
-
-      private final Bicycle bicycle;
+public interface BikeRide{
 
 
-      public BikeRide(Bicycle bicycle){
-        this.bicycle = bicycle;
-      }
+     void ride();
+     int currentSpeed();
 
-    public void ride() {
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.accelerate();
-        this.bicycle.brake();
-        this.bicycle.brake();
-        this.bicycle.accelerate();
-    }
 
-    public int currentSpeed(){
-          return this.bicycle.getSpeed();
-    }
 }

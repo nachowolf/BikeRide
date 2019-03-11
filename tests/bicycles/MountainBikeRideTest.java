@@ -1,12 +1,11 @@
 package bicycles;
 
 import models.MountainBike;
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BikeRideTest {
+public class MountainBikeRideTest {
 
     @Test
     public void rideTest() {
@@ -16,5 +15,4 @@ public class BikeRideTest {
         System.out.println(bikeRide.currentSpeed());
         assertEquals(36, bikeRide.currentSpeed());
     }
-
 }

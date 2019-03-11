@@ -1,9 +1,8 @@
 package bicycles;
 
-public class BikeRide {
+public class BikeRide{
 
       private final Bicycle bicycle;
-
 
 
       public BikeRide(Bicycle bicycle){

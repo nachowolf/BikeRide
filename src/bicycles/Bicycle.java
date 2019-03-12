@@ -2,7 +2,7 @@ package bicycles;
 
      public interface Bicycle {
 
-    int speed = 0;
+//    int speed = 0;
 
     //increase bike speed
      void accelerate();

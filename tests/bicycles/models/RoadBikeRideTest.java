@@ -28,13 +28,13 @@ public class RoadBikeRideTest {
         System.out.println(bikeRide.currentSpeed());
         assertEquals(21, bikeRide.currentSpeed());
     }
-
+@Test
     public void roadBikeRideThreeTest() {
         RoadBike bicycle = new RoadBike();
         BikeRideThree bikeRide = new rides.BikeRideThree(bicycle);
         bikeRide.ride();
         System.out.println(bikeRide.currentSpeed());
-        assertEquals(21, bikeRide.currentSpeed());
+        assertEquals(6, bikeRide.currentSpeed());
     }
 
 }

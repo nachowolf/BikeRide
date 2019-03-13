@@ -3,6 +3,7 @@ package bicycles;
 public abstract class BicycleBase implements Bicycle {
 
     private int speed = 0;
+//    private B
 
     protected void changeSpeed(int speeder){
         speed += speeder;

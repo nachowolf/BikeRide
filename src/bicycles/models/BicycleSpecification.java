@@ -1,12 +1,35 @@
 package bicycles.models;
 
 public class BicycleSpecification {
+
+    enum BicycleType {
+        RoadBike,
+        MountainBike,
+        Tandem
+    }
+
+    private String bicycleType;
     private int accelerationSpeed;
     private int brakeSpeed;
 
-    BicycleSpecification(int acceleration, int brake){
-        this.accelerationSpeed = acceleration;
-        this.brakeSpeed = brake;
+    BicycleSpecification( String bicycleType){
+        this.bicycleType = bicycleType.toString();
+        if(bicycleType == BicycleType.RoadBike.toString()){
+            this.accelerationSpeed = 11;
+            this.brakeSpeed = -4;
+        }
+        else if(bicycleType == BicycleType.MountainBike.toString()){
+            this.accelerationSpeed = 5;
+            this.brakeSpeed = -3;
+        }
+        else if(bicycleType == BicycleType.Tandem.toString()) {
+            this.accelerationSpeed = 12;
+            this.brakeSpeed = -7;
+        }
+    }
+
+    public String getBicycleType() {
+        return this.bicycleType;
     }
 
     public int getAccelerationSpeed(){
@@ -14,6 +37,6 @@ public class BicycleSpecification {
     }
 
     public int getBrakeSpeed() {
-        return brakeSpeed;
+        return this.brakeSpeed;
     }
 }

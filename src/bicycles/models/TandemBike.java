@@ -1,6 +1,6 @@
 package models;
 
-import bicycles.BicycleBase;
+import bicycles.models.BicycleBase;
 
 public class TandemBike extends BicycleBase {
 

@@ -1,10 +1,16 @@
 package bicycles;
+
 import bicycles.models.BicycleFromSpec;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class FunRide implements FunRideInterface {
 
     private int maxSpace;
-    BicycleFromSpec [] bikes = new BicycleFromSpec[maxSpace];
+    private List bikes = new ArrayList();
 
     FunRide(int max){
         this.maxSpace = max;
@@ -12,23 +18,28 @@ public class FunRide implements FunRideInterface {
 
     @Override
     public String addBike(BicycleFromSpec bike) {
-//        if(bikes.length < maxSpace){
-           Object bikes[0] = bike;
-//            return "accepted";
-//        }
-//        else{
-//            return "rejected";
-//        }
-        return "accepted";
+
+        if(bikes.size() < maxSpace){
+           bikes.add(bike.getBicycleType());
+            return "accepted";
+        }
+        else{
+            return "declined";
+        }
+
     }
 
     @Override
     public int getEnteredCount() {
-        return bikes.length;
+        return bikes.size();
     }
 
     @Override
     public int getCountForType(String bike) {
+        for(int i=0;i<bikes.size();i++) {
+        Object currentBike = bikes.get(i);
+        System.out.println(currentBike);
+        }
         return 0;
     }
 }

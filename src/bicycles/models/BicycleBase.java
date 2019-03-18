@@ -1,7 +1,5 @@
 package bicycles.models;
 
-import bicycles.models.Bicycle;
-
 public abstract class BicycleBase implements Bicycle {
 
     private int speed = 0;
@@ -9,6 +7,9 @@ public abstract class BicycleBase implements Bicycle {
 
     protected void changeSpeed(int speeder){
         speed += speeder;
+        if(this.speed < 0){
+            this.speed = 0;
+        }
     }
 
    protected void setBikeType(String bike){

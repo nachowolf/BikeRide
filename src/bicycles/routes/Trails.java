@@ -1,18 +1,18 @@
-package bicycles;
+package bicycles.routes;
 
 import bicycles.models.BicycleFromSpec;
-
+import bicycles.models.BicycleType;
 import java.util.ArrayList;
 import java.util.List;
 
 
 
-public class FunRide implements FunRideInterface {
+public class Trails implements FunRide {
 
     private int maxSpace;
     private List bikes = new ArrayList();
 
-    FunRide(int max){
+    Trails(int max){
         this.maxSpace = max;
     }
 
@@ -35,7 +35,7 @@ public class FunRide implements FunRideInterface {
     }
 
     @Override
-    public int getCountForType(String bike) {
+    public int getCountForType(BicycleType bike) {
         int counted = 0;
         for(int i=0;i<bikes.size();i++) {
         Object currentBike = bikes.get(i);

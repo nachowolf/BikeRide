@@ -10,7 +10,7 @@ public class BicycleSpecificationTests {
 
     @Test
     public void bicycleSpecificationTest(){
-        BicycleSpecification bike = new BicycleSpecification("RoadBike");
+        BicycleSpecification bike = new BicycleSpecification(BicycleType.RoadBike);
         assertEquals(11, bike.getAccelerationSpeed());
         assertEquals(-4, bike.getBrakeSpeed());
         assertEquals("RoadBike", bike.getBicycleType());
@@ -18,7 +18,7 @@ public class BicycleSpecificationTests {
 
     @Test
     public void roadBicycleSpecificationTest(){
-        BicycleSpecification roadBikeSpec = new BicycleSpecification("RoadBike");
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(BicycleType.RoadBike);
         Bicycle bicycle = new BicycleFromSpec(roadBikeSpec);
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
@@ -30,7 +30,7 @@ public class BicycleSpecificationTests {
 
     @Test
     public void mountainBicycleSpecificationTest(){
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification("MountainBike");
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(BicycleType.MountainBike);
         Bicycle bicycle = new BicycleFromSpec(mountainBikeSpec);
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
@@ -42,7 +42,7 @@ public class BicycleSpecificationTests {
 
     @Test
     public void tandemBicycleSpecificationTest(){
-        BicycleSpecification tandemBikeSpec = new BicycleSpecification("Tandem");
+        BicycleSpecification tandemBikeSpec = new BicycleSpecification(BicycleType.Tandem);
         Bicycle bicycle = new BicycleFromSpec(tandemBikeSpec);
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();

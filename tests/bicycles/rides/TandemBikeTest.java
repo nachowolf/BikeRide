@@ -1,4 +1,4 @@
-package bicycles.models;
+package bicycles.rides;
 
 import models.TandemBike;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,6 @@ public class TandemBikeTest {
         TandemBike bicycle = new TandemBike();
         BikeRideOne bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
         assertEquals(58, bikeRide.currentSpeed());
     }
 
@@ -24,7 +23,6 @@ public class TandemBikeTest {
         TandemBike bicycle = new TandemBike();
         BikeRideTwo bikeRide = new BikeRideTwo(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
         assertEquals(15, bikeRide.currentSpeed());
     }
 
@@ -33,7 +31,6 @@ public class TandemBikeTest {
         TandemBike bicycle = new TandemBike();
         BikeRideThree bikeRide = new BikeRideThree(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
-        assertEquals(-4, bikeRide.currentSpeed());
+        assertEquals(3, bikeRide.currentSpeed());
     }
 }

@@ -1,4 +1,4 @@
-package bicycles.models;
+package bicycles.rides;
 
 
 
@@ -16,7 +16,6 @@ public class RoadBikeRideTest {
         RoadBike bicycle = new RoadBike();
         BikeRideOne bikeRide = new rides.BikeRideOne(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
         assertEquals(58, bikeRide.currentSpeed());
     }
 
@@ -25,7 +24,6 @@ public class RoadBikeRideTest {
         RoadBike bicycle = new RoadBike();
         BikeRideTwo bikeRide = new rides.BikeRideTwo(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
         assertEquals(21, bikeRide.currentSpeed());
     }
 @Test
@@ -33,8 +31,7 @@ public class RoadBikeRideTest {
         RoadBike bicycle = new RoadBike();
         BikeRideThree bikeRide = new rides.BikeRideThree(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
-        assertEquals(6, bikeRide.currentSpeed());
+        assertEquals(10, bikeRide.currentSpeed());
     }
 
 }

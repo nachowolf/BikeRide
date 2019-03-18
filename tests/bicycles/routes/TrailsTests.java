@@ -1,24 +1,25 @@
-package bicycles;
+package bicycles.routes;
 
 import bicycles.models.BicycleFromSpec;
 import bicycles.models.BicycleSpecification;
+import bicycles.models.BicycleType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-;
 
 
 
-public class FunRideTests {
 
-    BicycleSpecification tandemBikeSpec = new BicycleSpecification("Tandem");
-    BicycleSpecification roadBikeSpec = new BicycleSpecification("RoadBike");
-    BicycleSpecification mountainBikeSpec = new BicycleSpecification("MountainBike");
+public class TrailsTests {
+
+    BicycleSpecification tandemBikeSpec = new BicycleSpecification(BicycleType.Tandem);
+    BicycleSpecification roadBikeSpec = new BicycleSpecification(BicycleType.RoadBike);
+    BicycleSpecification mountainBikeSpec = new BicycleSpecification(BicycleType.MountainBike);
 
     @Test
     public void addBikesToGroupTest(){
-        FunRide group = new FunRide(3);
+        FunRide group = new Trails(3);
         BicycleFromSpec tandem1 = new BicycleFromSpec(tandemBikeSpec);
         BicycleFromSpec tandem2 = new BicycleFromSpec(tandemBikeSpec);
         BicycleFromSpec tandem3 = new BicycleFromSpec(tandemBikeSpec);
@@ -31,7 +32,7 @@ public class FunRideTests {
 
     @Test
 public void countAllBikesAddedTest(){
-        FunRide group = new FunRide(5);
+        FunRide group = new Trails(5);
         BicycleFromSpec tandem1 = new BicycleFromSpec(tandemBikeSpec);
         group.addBike(tandem1);
         assertEquals(1, group.getEnteredCount());
@@ -39,7 +40,7 @@ public void countAllBikesAddedTest(){
 
     @Test
    public void countMoreAddedBikes(){
-        FunRide group = new FunRide(5);
+        FunRide group = new Trails(5);
         BicycleFromSpec tandem1 = new BicycleFromSpec(tandemBikeSpec);
         group.addBike(tandem1);
         BicycleFromSpec tandem2 = new BicycleFromSpec(tandemBikeSpec);
@@ -53,7 +54,7 @@ public void countAllBikesAddedTest(){
 
     @Test
 public void countAllSpecificBike(){
-        FunRide group = new FunRide(10);
+        FunRide group = new Trails(10);
         BicycleFromSpec tandem1 = new BicycleFromSpec(tandemBikeSpec);
         group.addBike(tandem1);
         BicycleFromSpec tandem2 = new BicycleFromSpec(tandemBikeSpec);
@@ -66,9 +67,9 @@ public void countAllSpecificBike(){
         group.addBike(mountainbike3);
         BicycleFromSpec roadbike1 = new BicycleFromSpec(roadBikeSpec);
         group.addBike(roadbike1);
-        assertEquals(2, group.getCountForType("Tandem"));
-        assertEquals(3, group.getCountForType("MountainBike"));
-        assertEquals(1, group.getCountForType("RoadBike"));
+        assertEquals(2, group.getCountForType(BicycleType.Tandem));
+        assertEquals(3, group.getCountForType(BicycleType.MountainBike));
+        assertEquals(1, group.getCountForType(BicycleType.RoadBike));
     }
 
 

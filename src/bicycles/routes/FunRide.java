@@ -1,8 +1,9 @@
-package bicycles;
+package bicycles.routes;
 
 import bicycles.models.BicycleFromSpec;
+import bicycles.models.BicycleType;
 
-public interface FunRideInterface {
+public interface FunRide {
 
     //Add bike
     String addBike(BicycleFromSpec bike);
@@ -11,5 +12,5 @@ public interface FunRideInterface {
     int getEnteredCount();
 
     //Count all specific bikes in BikeRide
-    int getCountForType(String bike);
+    int getCountForType(BicycleType bike);
 }

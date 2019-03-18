@@ -1,5 +1,6 @@
-package bicycles.models;
+package bicycles.rides;
 
+import bicycles.models.*;
 import rides.BikeRideOne;
 import rides.BikeRideTwo;
 import rides.BikeRideThree;
@@ -15,7 +16,6 @@ public class MountainBikeRideTest {
         MountainBike bicycle = new MountainBike();
         BikeRideOne bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
         assertEquals(24, bikeRide.currentSpeed());
     }
 
@@ -24,7 +24,6 @@ public class MountainBikeRideTest {
         MountainBike bicycle = new MountainBike();
         BikeRideTwo bikeRide = new BikeRideTwo(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
         assertEquals(6, bikeRide.currentSpeed());
     }
 
@@ -33,7 +32,6 @@ public class MountainBikeRideTest {
         MountainBike bicycle = new MountainBike();
         BikeRideThree bikeRide = new BikeRideThree(bicycle);
         bikeRide.ride();
-        System.out.println(bikeRide.currentSpeed());
-        assertEquals(-2, bikeRide.currentSpeed());
+        assertEquals(1, bikeRide.currentSpeed());
     }
 }

@@ -12,8 +12,8 @@ public class BicycleSpecification {
     private int accelerationSpeed;
     private int brakeSpeed;
 
-    BicycleSpecification( String bicycleType){
-        this.bicycleType = bicycleType.toString();
+    public BicycleSpecification( String bicycleType){
+        this.bicycleType = bicycleType;
         if(bicycleType == BicycleType.RoadBike.toString()){
             this.accelerationSpeed = 11;
             this.brakeSpeed = -4;
@@ -39,4 +39,6 @@ public class BicycleSpecification {
     public int getBrakeSpeed() {
         return this.brakeSpeed;
     }
+
+
 }

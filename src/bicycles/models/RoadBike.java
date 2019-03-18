@@ -1,6 +1,8 @@
 package models;
 
-public class RoadBike extends bicycles.BicycleBase{
+import bicycles.models.BicycleBase;
+
+public class RoadBike extends BicycleBase {
     private int roadBikeAccelerateSpeed = 11;
     private int roadBikeBrakeSpeed = -4;
 

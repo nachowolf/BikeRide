@@ -1,6 +1,6 @@
 package bicycles.models;
 
-public enum bicycleType {
+public enum BicycleType {
     RoadBike,
     MountainBike,
     Tandem

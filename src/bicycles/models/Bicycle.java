@@ -1,4 +1,4 @@
-package bicycles;
+package bicycles.models;
 
      public interface Bicycle {
 
@@ -12,6 +12,9 @@ package bicycles;
 
     //get bike current speed
     int getSpeed();
+
+    //get bike type
+         String getBicycleType();
 
     //stop bike
     void stop();

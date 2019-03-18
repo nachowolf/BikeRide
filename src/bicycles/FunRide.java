@@ -36,10 +36,13 @@ public class FunRide implements FunRideInterface {
 
     @Override
     public int getCountForType(String bike) {
+        int counted = 0;
         for(int i=0;i<bikes.size();i++) {
         Object currentBike = bikes.get(i);
-        System.out.println(currentBike);
+        if(currentBike == bike){
+            counted++;
         }
-        return 0;
+        }
+        return counted;
     }
 }

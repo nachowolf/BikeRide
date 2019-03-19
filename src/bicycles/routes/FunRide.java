@@ -1,6 +1,6 @@
 package bicycles.routes;
 
-import bicycles.models.BicycleFromSpec;
+import bicycles.specification.BicycleFromSpec;
 import bicycles.models.BicycleType;
 
 public interface FunRide {

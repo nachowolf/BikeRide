@@ -19,4 +19,5 @@ public class BicycleFromSpec extends BicycleBase {
 changeSpeed(this.bicycle.getBrakeSpeed());
     }
 
+
 }

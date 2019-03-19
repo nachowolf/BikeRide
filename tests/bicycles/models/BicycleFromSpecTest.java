@@ -17,6 +17,7 @@ public class BicycleFromSpecTest {
         assertEquals(5, mountainBike.getSpeed());
         mountainBike.stop();
         assertEquals(0, mountainBike.getSpeed());
+        assertEquals("MountainBike", mountainBike.getBicycleType());
     }
 
     @Test
@@ -26,5 +27,16 @@ public class BicycleFromSpecTest {
         assertEquals(11, roadBike.getSpeed());
         roadBike.stop();
         assertEquals(0, roadBike.getSpeed());
+        assertEquals("RoadBike", roadBike.getBicycleType());
+    }
+
+    @Test
+    public void checkIfTandemBikeIsCreated(){
+        BicycleFromSpec tandemBike = new BicycleFromSpec(tandemBikeSpec);
+        tandemBike.accelerate();
+        assertEquals(12, tandemBike.getSpeed());
+        tandemBike.stop();
+        assertEquals(0, tandemBike.getSpeed());
+        assertEquals("Tandem", tandemBike.getBicycleType());
     }
 }

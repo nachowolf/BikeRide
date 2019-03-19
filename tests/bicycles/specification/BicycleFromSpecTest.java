@@ -1,8 +1,6 @@
 package bicycles.specification;
 
 import bicycles.models.BicycleType;
-import bicycles.specification.BicycleFromSpec;
-import bicycles.specification.BicycleSpecification;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,7 +18,7 @@ public class BicycleFromSpecTest {
         assertEquals(5, mountainBike.getSpeed());
         mountainBike.stop();
         assertEquals(0, mountainBike.getSpeed());
-        assertEquals("MountainBike", mountainBike.getBicycleType());
+        assertEquals(BicycleType.MountainBike, mountainBike.getBicycleType());
     }
 
     @Test
@@ -30,7 +28,7 @@ public class BicycleFromSpecTest {
         assertEquals(11, roadBike.getSpeed());
         roadBike.stop();
         assertEquals(0, roadBike.getSpeed());
-        assertEquals("RoadBike", roadBike.getBicycleType());
+        assertEquals(BicycleType.RoadBike, roadBike.getBicycleType());
     }
 
     @Test
@@ -40,6 +38,6 @@ public class BicycleFromSpecTest {
         assertEquals(12, tandemBike.getSpeed());
         tandemBike.stop();
         assertEquals(0, tandemBike.getSpeed());
-        assertEquals("Tandem", tandemBike.getBicycleType());
+        assertEquals(BicycleType.Tandem, tandemBike.getBicycleType());
     }
 }

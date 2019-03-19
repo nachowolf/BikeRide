@@ -18,7 +18,7 @@ public class BicycleBaseTest {
     public void createARoadBike(){
        BicycleFromSpec bicycle = new BicycleFromSpec(roadBikeSpec);
        assertEquals(0, bicycle.getSpeed());
-        assertEquals("RoadBike", bicycle.getBicycleType());
+        assertEquals(BicycleType.RoadBike, bicycle.getBicycleType());
 
     }
 
@@ -26,14 +26,14 @@ public class BicycleBaseTest {
     public void createAMountainBike(){
         BicycleFromSpec bicycle = new BicycleFromSpec(mountainBikeSpec);
         assertEquals(0, bicycle.getSpeed());
-        assertEquals("MountainBike", bicycle.getBicycleType());
+        assertEquals(BicycleType.MountainBike, bicycle.getBicycleType());
 
     }
     @Test
     public void createATandemBike(){
         BicycleFromSpec bicycle = new BicycleFromSpec(tandemBikeSpec);
         assertEquals(0, bicycle.getSpeed());
-        assertEquals("Tandem", bicycle.getBicycleType());
+        assertEquals(BicycleType.Tandem, bicycle.getBicycleType());
 
     }
 }

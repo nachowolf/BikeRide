@@ -14,7 +14,7 @@ package bicycles.models;
     int getSpeed();
 
     //get bike type
-         String getBicycleType();
+    BicycleType getBicycleType();
 
     //stop bike
     void stop();

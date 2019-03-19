@@ -25,8 +25,8 @@ public class BicycleSpecification {
         }
     }
 
-    public String getBicycleType() {
-        return this.bicycleType.toString();
+    public BicycleType getBicycleType() {
+        return this.bicycleType;
     }
 
     public int getAccelerationSpeed(){

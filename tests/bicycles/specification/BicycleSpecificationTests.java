@@ -15,7 +15,7 @@ public class BicycleSpecificationTests {
         BicycleSpecification bike = new BicycleSpecification(BicycleType.RoadBike);
         assertEquals(11, bike.getAccelerationSpeed());
         assertEquals(-4, bike.getBrakeSpeed());
-        assertEquals("RoadBike", bike.getBicycleType());
+        assertEquals(BicycleType.RoadBike, bike.getBicycleType());
     }
 
     @Test
@@ -25,7 +25,7 @@ public class BicycleSpecificationTests {
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
         assertEquals(58, bikeRide.currentSpeed());
-        assertEquals("RoadBike", bicycle.getBicycleType());
+        assertEquals(BicycleType.RoadBike, bicycle.getBicycleType());
 //        assertEquals(11, bikeRide.getAccelerationSpeed());
 //        assertEquals(-4, bikeRide.getBrakeSpeed());
     }
@@ -37,7 +37,7 @@ public class BicycleSpecificationTests {
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
         assertEquals(24, bikeRide.currentSpeed());
-        assertEquals("MountainBike", bicycle.getBicycleType());
+        assertEquals(BicycleType.MountainBike, bicycle.getBicycleType());
 //        assertEquals(5, bikeRide.getAccelerationSpeed());
 //        assertEquals(-3, bikeRide.getBrakeSpeed());
     }
@@ -49,7 +49,7 @@ public class BicycleSpecificationTests {
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride();
         assertEquals(58, bikeRide.currentSpeed());
-        assertEquals("Tandem", bicycle.getBicycleType());
+        assertEquals(BicycleType.Tandem, bicycle.getBicycleType());
 //        assertEquals(11, bikeRide.getAccelerationSpeed());
 //        assertEquals(-4, bikeRide.getBrakeSpeed());
     }

@@ -1,7 +1,8 @@
 package bicycles.routes;
 
-import bicycles.specification.BicycleFromSpec;
+import bicycles.models.Bicycle;
 import bicycles.models.BicycleType;
+import bicycles.specification.BicycleFromSpec;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 public class Trails implements FunRide {
 
     private int maxSpace;
-    private List<Object> bikes = new ArrayList<Object>();
+    private List<Bicycle> bikes = new ArrayList<>();
 
     Trails(int max){
         this.maxSpace = max;
@@ -36,11 +37,10 @@ public class Trails implements FunRide {
     }
 
     @Override
-    public int getCountForType(BicycleType bike) {
+    public int getCountForType(BicycleType bikeType) {
         int counted = 0;
-        for (Object i : bikes) {
-            BicycleFromSpec bicycle = (BicycleFromSpec) i;
-            if(bicycle.getBicycleType() == bike.toString()){
+        for (Bicycle bicycle : bikes) {
+            if(bicycle.getBicycleType() == bikeType){
                 counted++;
             }
         }

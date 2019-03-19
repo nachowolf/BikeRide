@@ -3,7 +3,7 @@ package bicycles.models;
 public abstract class BicycleBase implements Bicycle {
 
     private int speed = 0;
-    private String bikeType;
+    private BicycleType bikeType;
 
     protected void changeSpeed(int speeder){
         speed += speeder;
@@ -12,7 +12,7 @@ public abstract class BicycleBase implements Bicycle {
         }
     }
 
-   protected void setBikeType(String bike){
+   protected void setBikeType(BicycleType bike){
         this.bikeType = bike;
    }
 
@@ -22,7 +22,7 @@ public abstract class BicycleBase implements Bicycle {
     }
 
     @Override
-    public String getBicycleType() {
+    public BicycleType getBicycleType() {
         return bikeType;
     }
 
